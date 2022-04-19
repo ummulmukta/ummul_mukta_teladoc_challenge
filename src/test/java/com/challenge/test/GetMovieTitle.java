@@ -43,7 +43,7 @@ public class GetMovieTitle {
 		JsonPath js = new JsonPath(res);
 
 		int totalPages = Integer.parseInt(js.getString("total_pages"));
-		
+
 		// Iterate the number of pages and add the movie titles in an ArrayList
 
 		for (int a = 1; a <= totalPages; a++) {
@@ -57,11 +57,11 @@ public class GetMovieTitle {
 			movieTitlesComplete.addAll(movieTitlesPartial);
 
 		}
-
+       //Sorting the titles in ascending order
 		Collections.sort(movieTitlesComplete);
-		
+
 		System.out.println(" Total number of titles found  " + movieTitlesComplete.size());
-		
+
 		for (String str : movieTitlesComplete)
 			System.out.println("Title is:   " + str);
 
